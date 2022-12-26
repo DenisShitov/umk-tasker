@@ -1,0 +1,31 @@
+<?php
+
+namespace Admin\Http\Controllers\Api;
+
+use ZipArchive;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
+
+class UpdateApp
+{
+    /**
+     * Handle the incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function __invoke(Request $request)
+    {
+        $zip = new ZipArchive;
+        $res = $zip->open(base_path('spack.zip'));
+
+        if ($res === true) {
+            $zip->extractTo(base_path());
+            $zip->close();
+        }
+
+        return [
+            'status' => 'done',
+        ];
+    }
+}
