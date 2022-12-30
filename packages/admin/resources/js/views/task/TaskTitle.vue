@@ -1,7 +1,6 @@
 <template>
     <div @click="task.isContentFormTitle = true">
-        <h1 class="text-gray-800 font-semibold">Заголовок</h1>
-        <h2 class="text-base ">
+        <h2 class="text-base">
             {{ task.data.title }}
         </h2>
     </div>

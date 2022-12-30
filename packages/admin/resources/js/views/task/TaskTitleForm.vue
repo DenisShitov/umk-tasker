@@ -1,11 +1,10 @@
 
 <template>
     <section :class="{ 'opacity-50': processing }">
-        <h1 class="text-gray-800 font-semibold">Заголовок</h1>
         <div class="border rounded-md overflow-hidden">
       <textarea
           class="autosize task-title block w-full text-sm border-0 focus:ring-0 resize-none h-8 font-semibold text-base text-gray-800 placeholder:text-gray-500 placeholder:font-normal placeholder:text-sm px-2 pt-2"
-          placeholder="Task"
+          placeholder="Заголовок задачи"
           v-model="title"
           @keydown.enter.prevent="save"
           @keydown.esc="cancel"

@@ -1,6 +1,5 @@
 <template>
     <div @click="task.isContentFormDesc = true">
-        <h1 class="text-gray-800 font-semibold mt-4">Описание</h1>
         <article
             class="mt-2 prose prose-sm text-gray-700 text-sm break-all"
             v-if="task.data.description"
@@ -43,5 +42,7 @@ renderer.link = (href, title, text) => {
         padding: 0.5rem;
         width: 100%;
         max-width: unset;
+        overflow-y: auto;
+        max-height: 400px;
     }
 </style>

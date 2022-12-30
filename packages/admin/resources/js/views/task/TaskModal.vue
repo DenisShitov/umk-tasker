@@ -43,7 +43,7 @@
     </div>
 
     <div class="flex">
-      <main class="flex-1 px-6 pt-6 pb-8">
+      <main class="flex-1 px-6 pt-6 pb-8 max-h-[85vh] overflow-y-auto">
         <TaskMain/>
           <TaskFiles/>
         <!-- <SubTasks/> -->

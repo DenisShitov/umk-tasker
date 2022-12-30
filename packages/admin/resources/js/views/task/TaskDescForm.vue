@@ -1,9 +1,9 @@
 <template>
     <section :class="{ 'opacity-50': processing }">
-        <h1 class="text-gray-800 font-semibold mt-4">Описание</h1>
         <div class="border rounded-md overflow-hidden mt-2">
             <QuillEditor
-                class="min-h-[250px]"
+                :placeholder="'Описание задачи'"
+                class="quill-style-block min-h-[250px]"
                 theme="snow"
                 toolbar="essential"
                 v-model:content="description"
@@ -78,7 +78,6 @@ function cancel() {
 </script>
 
 <style scoped>
-
     article{
         border-radius: 0.375rem;
         border-width: 1px;
